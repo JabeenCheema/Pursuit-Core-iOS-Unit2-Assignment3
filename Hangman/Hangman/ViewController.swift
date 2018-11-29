@@ -9,12 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  override func viewDidLoad() {
+    
+    
+    @IBOutlet weak var hangmanPic: UIImageView!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBOutlet weak var correctGuess: UILabel!
+    
+    @IBOutlet weak var secureText: UITextField!
+    
+    @IBOutlet weak var userTextField: UITextField!
+    
+    @IBOutlet weak var wrongGuesses: UILabel!
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-
-
+   
+    }
 }
+
+extension ViewController: UITextFieldDelegate {
+            func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                secureText.resignFirstResponder()
+                userTextField.resignFirstResponder()
+                return true
+            }
+            
+            func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+                
+                return true
+            }
+        }
+    
+    
+    
+    
+
 
