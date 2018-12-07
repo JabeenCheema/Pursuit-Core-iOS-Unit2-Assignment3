@@ -12,16 +12,19 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var hangmanPic: UIImageView!
-    
     @IBOutlet weak var messageLabel: UILabel!
-    
     @IBOutlet weak var correctGuess: UILabel!
-    
     @IBOutlet weak var secureText: UITextField!
-    
     @IBOutlet weak var userTextField: UITextField!
-    
     @IBOutlet weak var wrongGuesses: UILabel!
+    
+    var usedLetters = ""
+    var hangman: HangManBrain = HangManBrain()
+    var newWord = [String]() // whatever word is put into the secure field 
+    
+    
+    
+    
     
     override func viewDidLoad() {
     super.viewDidLoad()
