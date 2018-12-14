@@ -32,9 +32,4 @@ var correctLetters = [String]()
     func image(myInt: Int) -> UIImage {
         return hangmanImage.allPictures.filter{$0.number == myInt}[0].image
     }
-
-
-
-
-
 }

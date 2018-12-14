@@ -20,13 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-2a-4q0">
                                 <rect key="frame" x="11" y="31" width="353" height="267"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EF-gs-Mxf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messageLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EF-gs-Mxf">
                                 <rect key="frame" x="11" y="309" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-6A-fdJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="correctGuess" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-6A-fdJ">
                                 <rect key="frame" x="11" y="341" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -46,14 +46,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-gm-2fz">
-                                <rect key="frame" x="164" y="537" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-gm-2fz">
+                                <rect key="frame" x="11" y="517" width="353" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="NewGameButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lkd-0W-Njq"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXE-QX-aNk">
-                                <rect key="frame" x="16" y="487" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wrongGuesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXE-QX-aNk">
+                                <rect key="frame" x="11" y="466" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,32 +62,43 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="20J-TK-S2X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="5GL-He-OcU"/>
-                            <constraint firstItem="Plb-6A-fdJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="7TG-BN-UvL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Plb-6A-fdJ" secondAttribute="trailing" constant="11" id="8K6-5v-L5H"/>
+                            <constraint firstItem="uHT-gm-2fz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="4X4-8C-EYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="20J-TK-S2X" secondAttribute="trailing" constant="11" id="8cD-OO-goo"/>
+                            <constraint firstItem="uHT-gm-2fz" firstAttribute="top" secondItem="iXE-QX-aNk" secondAttribute="bottom" constant="30" id="A5B-vX-NGV"/>
                             <constraint firstItem="t7d-2a-4q0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="BYk-8C-CB1"/>
-                            <constraint firstItem="Plb-6A-fdJ" firstAttribute="top" secondItem="7EF-gs-Mxf" secondAttribute="bottom" constant="11" id="Chz-a7-jTh"/>
                             <constraint firstItem="t7d-2a-4q0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="Fbk-WB-3rW"/>
+                            <constraint firstItem="Plb-6A-fdJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="HPt-fm-MIa"/>
+                            <constraint firstItem="rpM-v8-Zf1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="IVx-TW-bbF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7EF-gs-Mxf" secondAttribute="trailing" constant="11" id="Lek-WL-F6E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="20J-TK-S2X" secondAttribute="trailing" constant="11" id="M4q-T2-P1A"/>
-                            <constraint firstItem="rpM-v8-Zf1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="PwQ-Vz-YWi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rpM-v8-Zf1" secondAttribute="trailing" constant="11" id="QET-Bq-5TE"/>
+                            <constraint firstItem="iXE-QX-aNk" firstAttribute="top" secondItem="20J-TK-S2X" secondAttribute="bottom" constant="22" id="TvG-Sc-WXp"/>
                             <constraint firstItem="t7d-2a-4q0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="VI2-YA-62z"/>
-                            <constraint firstItem="rpM-v8-Zf1" firstAttribute="top" secondItem="Plb-6A-fdJ" secondAttribute="bottom" constant="11" id="eZh-F0-ccy"/>
-                            <constraint firstItem="20J-TK-S2X" firstAttribute="top" secondItem="rpM-v8-Zf1" secondAttribute="bottom" constant="11" id="lJo-yk-0sl"/>
+                            <constraint firstItem="iXE-QX-aNk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="YHa-VJ-ol2"/>
+                            <constraint firstItem="20J-TK-S2X" firstAttribute="top" secondItem="rpM-v8-Zf1" secondAttribute="bottom" constant="11" id="dba-bc-S79"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iXE-QX-aNk" secondAttribute="trailing" constant="11" id="gsp-qt-aga"/>
+                            <constraint firstItem="rpM-v8-Zf1" firstAttribute="top" secondItem="Plb-6A-fdJ" secondAttribute="bottom" constant="11" id="gx7-Sb-gvZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uHT-gm-2fz" secondAttribute="trailing" constant="11" id="iES-4n-HmC"/>
+                            <constraint firstItem="Plb-6A-fdJ" firstAttribute="top" secondItem="7EF-gs-Mxf" secondAttribute="bottom" constant="11" id="jXx-g6-hB5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Plb-6A-fdJ" secondAttribute="trailing" constant="11" id="lJd-8f-Krg"/>
                             <constraint firstItem="7EF-gs-Mxf" firstAttribute="top" secondItem="t7d-2a-4q0" secondAttribute="bottom" constant="11" id="lqz-KN-pmo"/>
+                            <constraint firstItem="7EF-gs-Mxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="oCW-jg-QC5"/>
+                            <constraint firstItem="20J-TK-S2X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="qPD-IV-F6x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rpM-v8-Zf1" secondAttribute="trailing" constant="11" id="qbT-eg-hx9"/>
+                            <constraint firstItem="7EF-gs-Mxf" firstAttribute="top" secondItem="t7d-2a-4q0" secondAttribute="bottom" constant="11" id="sBS-cf-8PL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7EF-gs-Mxf" secondAttribute="trailing" constant="11" id="sNp-5R-IuM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t7d-2a-4q0" secondAttribute="trailing" constant="11" id="vsX-br-OGW"/>
                             <constraint firstItem="7EF-gs-Mxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="zLm-XI-2IA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="correctGuess" destination="Plb-6A-fdJ" id="TJv-6x-kqU"/>
-                        <outlet property="hangmanPic" destination="t7d-2a-4q0" id="Sug-5S-UVw"/>
-                        <outlet property="messageLabel" destination="7EF-gs-Mxf" id="Qbs-p2-zIJ"/>
-                        <outlet property="secureText" destination="rpM-v8-Zf1" id="5h1-Hw-xxK"/>
-                        <outlet property="userTextField" destination="20J-TK-S2X" id="EzH-fU-x86"/>
-                        <outlet property="wrongGuesses" destination="iXE-QX-aNk" id="PA0-Bb-z4a"/>
+                        <outlet property="NewGameButton" destination="uHT-gm-2fz" id="AQs-nG-Y8P"/>
+                        <outlet property="correctGuess" destination="Plb-6A-fdJ" id="Dxl-3a-AtN"/>
+                        <outlet property="hangmanPic" destination="t7d-2a-4q0" id="iJx-jo-iiL"/>
+                        <outlet property="messageLabel" destination="7EF-gs-Mxf" id="5nm-1P-ebH"/>
+                        <outlet property="secureText" destination="rpM-v8-Zf1" id="hMI-5j-Rw7"/>
+                        <outlet property="userTextField" destination="20J-TK-S2X" id="Tg2-lA-oFA"/>
+                        <outlet property="wrongGuesses" destination="iXE-QX-aNk" id="2RN-IV-bON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
